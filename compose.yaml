@@ -1,0 +1,12 @@
+services:
+  apache-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - apache-server-network
+networks:
+  apache-server-network:
+    driver: bridge
